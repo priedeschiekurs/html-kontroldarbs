@@ -2,34 +2,136 @@
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport"
-         content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digitālā bibliotēka — iepazīsti grāmatas un to autorus.">
     <title>Digitālā bibliotēka</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Sākums</h1>
+        <h1>Digitālā bibliotēka</h1>
+        <p>Atrodi savu nākamo grāmatu un iepazīsti lasīšanas prieku.</p>
+        <nav>
+            <ul>
+                <li><a href="#sakums">Sākums</a></li>
+                <li><a href="#gramatas">Grāmatas</a></li>
+                <li><a href="#prieksrocibas">Priekšrocības</a></li>
+                <li><a href="#kontakti">Kontakti</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Sākums</a></li>
-            <li><a href="books.html">Grāmatas</a></li>
-            <li><a href="features.html">Priekšrocības</a></li>
-            <li><a href="contact.html">Kontakti</a></li>
-        </ul>
-    </nav>
     <main>
-        <section>
-            <h2>Grāmatu autori</h2>
-            <article>
-                <h3>Grāmatas nosaukums</h3>
-                <p>apraksts</p>
+        <section id="sakums">
+            <h2>Laipni lūdzam bibliotēkā!</h2>
+            <p>Atklāj aizraujošus stāstus, uzzini ko jaunu un izvēlies grāmatu, ko lasīt nākamo.</p>
+        </section>
+        <section id="gramatas">
+            <h2>Grāmatu izlase</h2>
+            <article class="gramatas-kartite">
+                <p class="gramatas-ikona" aria-hidden="true">🐕</p>
+                <h3>„Vinnijs Pūks”</h3>
+                <p>A. A. Milna sirsnīgais stāsts par Pūku un viņa draugiem Simtjūdžu mežā.</p>
+                <a href="#kontakti">Rezervēt grāmatu</a>
             </article>
+            <article class="gramatas-kartite">
+                <p class="gramatas-ikona" aria-hidden="true">🌌</p>
+                <h3>„Mazais princis”</h3>
+                <p>Antuāna de Sent-Ekziperī pasaka par draudzību, ceļojumiem un svarīgāko dzīvē.</p>
+                <a href="#kontakti">Rezervēt grāmatu</a>
+            </article>
+            <article class="gramatas-kartite">
+                <p class="gramatas-ikona" aria-hidden="true">🌿</p>
+                <h3>„Zaļā zeme”</h3>
+                <p>Izzinošs ceļvedis dabas iepazīšanai un videi draudzīgai ikdienai.</p>
+                <a href="#kontakti">Rezervēt grāmatu</a>
+            </article>
+        </section>
+        <section id="prieksrocibas">
+            <h2>Bibliotēkas priekšrocības</h2>
+            <ul>
+                <li>Grāmatas dažādām gaumēm un vecumiem</li>
+                <li>Ērta grāmatu rezervēšana tiešsaistē</li>
+                <li>Lasītavas un bibliotekāra konsultācijas</li>
+                <li>Regulāri pasākumi un tikšanās ar lasītājiem</li>
+            </ul>
+            <h3>Lasītavas darba laiks un pasākumi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Diena</th>
+                        <th scope="col">Lasītava</th>
+                        <th scope="col">Konsultācijas</th>
+                        <th scope="col">Pasākums</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pirmdiena</td>
+                        <td>9.00–18.00</td>
+                        <td>10.00–12.00</td>
+                        <td>Jauno grāmatu apskats</td>
+                    </tr>
+                    <tr>
+                        <td>Trešdiena</td>
+                        <td>9.00–18.00</td>
+                        <td>14.00–16.00</td>
+                        <td>Lasītāju klubs</td>
+                    </tr>
+                    <tr>
+                        <td>Sestdiena</td>
+                        <td>10.00–15.00</td>
+                        <td>11.00–13.00</td>
+                        <td>Ģimeņu lasīšanas rīts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="kontakti">
+            <h2>Rezervē grāmatu</h2>
+            <form>
+                <p>
+                    <label for="vards">Vārds</label>
+                    <input type="text" id="vards" name="vards" placeholder="Tavs vārds" required>
+                </p>
+                <p>
+                    <label for="epasts">E-pasts</label>
+                    <input type="email" id="epasts" name="epasts" placeholder="vards@piemers.lv" required>
+                </p>
+                <p>
+                    <label for="talrunis">Tālrunis</label>
+                    <input type="tel" id="talrunis" name="talrunis" placeholder="+371 20000000" required>
+                </p>
+                <p>
+                    <label for="gramata">Grāmata</label>
+                    <select id="gramata" name="gramata" required>
+                        <option value="" disabled selected>Izvēlies grāmatu</option>
+                        <option value="vinnijs-puks">„Vinnijs Pūks”</option>
+                        <option value="mazais-princis">„Mazais princis”</option>
+                        <option value="zala-zeme">„Zaļā zeme”</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="sanemsanas-veids">Saņemšanas veids</label>
+                    <select id="sanemsanas-veids" name="sanemsanas-veids" required>
+                        <option value="" disabled selected>Izvēlies saņemšanas veidu</option>
+                        <option value="lasitava">Saņemt lasītavā</option>
+                        <option value="pasts">Saņemt ar piegādi</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="piezimes">Piezīmes</label>
+                    <textarea id="piezimes" name="piezimes" placeholder="Papildu informācija (nav obligāti)" rows="4"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="piekrisana" name="piekrisana" value="piekritu" required>
+                    <label for="piekrisana">Piekrītu, ka ar mani sazinās par grāmatas rezervāciju.</label>
+                </p>
+                <button type="submit">Nosūtīt rezervāciju</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>© 2026 digitālā bibliotēka</p>
+        <p>© 2026 Digitālā bibliotēka</p>
     </footer>
 </body>
 </html>
